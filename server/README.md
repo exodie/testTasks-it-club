@@ -44,7 +44,7 @@
 - input your port number (maybe 3001) like `EXPRESS_APP_PORT='3001'`
 
 #### Finally:
-- Your file structure should look like this: ![example]('https://yapx.ru/v/Uucej')
+- Your file structure should look like this: ![example](../photo/example.png)
 
 ---
 ### Инструкция к использованию запросов:
