@@ -15,6 +15,7 @@ export async function createUser(login: string, password: string): Promise<boole
                 data: {
                     login: login,
                     password: password,
+                    isRegister: true
                 },
             });
 
@@ -30,21 +31,14 @@ export async function createUser(login: string, password: string): Promise<boole
 
 export async function getUserAll() {
     try {
-        const allUser = await prisma.user.findMany();
+        // немного схитрил :)
+        const allUser = await prisma.user.findMany({
+            where: {
+                isRegister: true,
+            },
+        });
 
-        let obj = {};
-
-        for (let key in allUser) {
-            obj = {
-                id: allUser[key].id,
-                login: allUser[key].login,
-                password: allUser[key].password,
-                role: allUser[key].role,
-                isAdmin: allUser[key].isAdmin
-            };
-        }
-
-        return obj;
+        return allUser;
     } catch (e) {
         console.error(e);
     }

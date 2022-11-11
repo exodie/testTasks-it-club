@@ -1,4 +1,5 @@
-import express, { Application, json, NextFunction, Request, Response } from 'express';
+import express, { Application, json} from 'express';
+import cors from 'cors';
 import indexRouter from './routes/indexRouters';
 import log from './utils/logUtils';
 
@@ -9,6 +10,7 @@ export default class Express {
         this.app = express();
         this.app.set('port', this.port);
         this.app.use(json());
+        this.app.use(cors()); // using axios methods from client-side
         this.routes();
     }
 
