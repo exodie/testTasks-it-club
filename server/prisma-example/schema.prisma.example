@@ -12,23 +12,9 @@ datasource db {
 
 model User {
   id Int @id @unique @default(autoincrement()) // autoincrementer id user
-  uid Int @unique // uid for client-side
   login String @unique // Хеш Логина пользователя
-  email String @unique // Хеш Почты пользователя
   password String // Хеш пароля пользователя
-  code String // Хеш пинкода пользователя (start type: Int | number)
-  status String @default("Registration") // На каком этапе находится пользователь
-  errors Error[] // Какие ошибки получал пользователь
   role String @default("Student") // Student, Teacher, Admin, Developer
-  isTeacher Boolean @default(false) // Пользователь -> учитель?
-  isDev Boolean @default(false) // Доступны ли пользователю действия разработчика
-}
-
-model Error {
-  id Int @id @default(autoincrement())
-  fromUser User[] // От какого пользователя пришла ошибка
-  type String // Тип выдываемой ошибки
-  message String // Сообщение которое выдала ошибка
-  time String // Время ошибки
-  isAccepted Boolean @default(false) // Принята ли ошибка на рассмотрение
+  isAdmin Boolean @default(false) // test params
+  isRegister Boolean
 }
