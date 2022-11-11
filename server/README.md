@@ -7,6 +7,8 @@
 - PUT /api/user/{id}/ (изменение пользователя)
 - DELETE /api/user/{id}/ (удаление пользователя)
 
+---
+
 ### Технологии:
 #### Server-side
 - express.js
@@ -31,6 +33,18 @@
 - run `cd client`
 - run `npm i`
 - run `npm start`
+
+#### Prisma-scheme:
+- rename `server/prisma-example` folder to `prisma`
+- rename file in prisma folder to `schema.prisma`
+- If you have error from prisma, delete all migrations & dev.db file and run `npx prisma migrate dev`
+
+#### .env:
+- rename `server/.env.example` to `.env`
+- input your port number (maybe 3001) like `EXPRESS_APP_PORT='3001'`
+
+#### Finally:
+- Your file structure should look like this: ![example](../photo/example.png)
 
 ---
 ### Инструкция к использованию запросов:
