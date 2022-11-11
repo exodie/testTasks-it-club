@@ -34,12 +34,12 @@
 - run `npm i`
 - run `npm start`
 
-### Prisma-scheme:
+#### Prisma-scheme:
 - rename `server/prisma-example` folder to `prisma`
 - rename file in prisma folder to `schema.prisma`
 - If you have error from prisma, delete all migrations & dev.db file and run `npx prisma migrate dev`
 
-### .env:
+#### .env:
 - rename `server/.env.example` to `.env`
 - input your port number (maybe 3001) like `EXPRESS_APP_PORT='3001'`
 
