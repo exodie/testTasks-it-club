@@ -32,7 +32,7 @@
 - run `npm i`
 - run `npm start`
 
-
+---
 ### Инструкция к использованию запросов:
 #### Server-side - http://localhost:3001:
 - /api/user/create - создает нового пользователя,
@@ -40,4 +40,18 @@
 - /api/user/get/:id - получаем на клиент всю информацию о пользователе (по его уник. id)
 - /api/user/change/:id - изменяем статус админа с false на true (по уник. id)
 - /api/user/delete/:id - удаляем пользователя из БД (по уник. id)
-- http://localhost:3000/ - client-side 
+
+### Client-side - http://localhost:3000:
+- http://localhost:3000/ - несколько доступных строк ввода данных, и несколько кнопок отвечающих за "функционал".
+
+---
+### Результаты запросов:
+- создание пользователя: ![userCreate](../photo/create.png)
+
+- Поиск всех пользователей: ![userFindAll](../photo/userfindall.png)
+
+- Поиск по id: ![userFindId](../photo/userfindid.png)
+
+- Изменение по id: ![userChangeId](../photo/userchangeid.png)
+
+- Удаление пользователя по id: ![userDelete](../photo/deleteuser.png)
