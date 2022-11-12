@@ -62,7 +62,7 @@
 ### Результаты запросов:
 - создание пользователя: ![userCreate](../photo/create.png)
 
-- Поиск всех пользователей: ![userFindAll](../photo/userfindall.png)
+- Поиск всех пользователей: ![userFindAll](../photo/userfindallv2.png)
 
 - Поиск по id: ![userFindId](../photo/userfindid.png)
 
